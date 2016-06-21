@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 2 - Part 1</title>
+    
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <link href="styles/main.css" type="text/css" rel="stylesheet" />
+    <script>
+        // Step 1
+        var myName = prompt("What is your name?");
+        alert("Hello " + myName + ".");
+        alert(myName.length);
+        // Step 1 Done
+        
+        // Step 2
+        var myName = prompt("What is your name?");
+        var num = prompt("Enter a number between 1 and " + myName.length);
+        alert(myName.charAt(num - 1));
+        // Step 2 Done
+        
+        // Step 3
+        var firstName = prompt("What is your first name?");
+        var lastName = prompt("What is your last name?");
+        alert("Your name is: " + firstName + ' ' + lastName + ".");
+        // Step 3 Done
+        
+        // Step 4
+        var phrase = "The quick brown fox jumps over the lazy fox";
+        alert(phrase.indexOf("fox"));
+        // Step 4 Done
+        
+        // Step 5
+        var phrase = "The quick brown fox jumps over the lazy fox";
+        alert(phrase.lastIndexOf("fox"));
+        // Step 5 Done
+        
+        // Step 6
+        var phrase = "The quick brown fox jumps over the lazy dog";
+        var fullName = prompt("Please enter your full name:");
+        alert(phrase.replace("the lazy dog", fullName));
+        // Step 6 Done
+        
+        // Step 7
+        var phrase = "The quick brown fox jumps over the lazy dog";
+        var word = prompt("Please enter a word of your choice:");
+        alert(phrase.search(word));
+        // Step 7 Done
+        
+        // Step 8
+        var old_string = "The quick brown fox jumps over the lazy dog";
+        var new_string = old_string.slice(old_string.lastIndexOf("the"), old_string.length);
+        alert(new_string.toUpperCase());
+        // Step 8 Done
+        
+        // Step 9
+        var capsPhrase = "  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG  ";
+        var newPhrase = capsPhrase.trim();
+        alert(newPhrase.toLowerCase());
+        // Step 9 Done
+        
+        // Step 10
+        var phrase = "the quick brown fox jumps over the lazy dog";
+        var firstLetter = phrase.charAt(0).toUpperCase();
+        var firstCapphrase = firstLetter + phrase.slice(1,phrase.length);
+        alert(firstCapphrase);
+        // Step 10 Done
+
+    </script>
+</head>
+
+<body>
+   <header>
+       
+   </header>
+   
+   <footer>
+       
+   </footer>
+    
+</body>
+</html>
