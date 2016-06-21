@@ -1,0 +1,277 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 2 - Part 2</title>
+    
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <link href="../styles/main.css" type="text/css" rel="stylesheet" />
+    
+    <script>
+        // Assignment 2 - Part 2
+        // Part 1
+        // Step 1
+        var num = prompt("Please enter a number:");
+        alert(Math.abs(num)); // abs = absolute value of number
+        // Step 1 Done
+        
+        // Step 2
+        var num = prompt("Please enter a floating point value, (decimal):");
+        console.log(Math.ceil(num)); // ceil = smallest integer >= a number
+        // Step 2 Done
+        
+        // Step 3
+        var num = prompt("Please enter a floating point value:");
+        console.log(Math.floor(num)); // floor = largest integer <= a number
+        // Step 3 Done
+        
+        // Step 4
+        var numbers = window.prompt("Please enter 5 numbers, separate them with commas, and do not include any spaces:");
+        numbers = numbers.split(",");
+        console.log(Math.max(Number(numbers[0]), Number(numbers[1]), Number(numbers[2]), Number(numbers[3]), Number(numbers[4])));
+        console.log(Math.min(Number(numbers[0]), Number(numbers[1]), Number(numbers[2]), Number(numbers[3]), Number(numbers[4])));
+        // Step 4 Done
+        
+        //Step 5
+        var num = prompt("Please enter a number:");
+        console.log(Math.sqrt(num)); // sqrt = square root of a number
+        // Step 5 Done
+        // Part 1 Done
+        
+        // Part 2
+        // Step 6
+        var currentDate = new Date();
+        console.log(currentDate);
+        // Step 6 Done
+        
+        // Step 7
+        var currentDate = new Date();
+        var daysMonth = currentDate.getMonth();
+        if (daysMonth == 0 || daysMonth == 2 || daysMonth == 4 || daysMonth == 6 || daysMonth == 7 || daysMonth == 9 || daysMonth == 11) {
+            console.log("There are 31 days in the current month.");
+        } else if (daysMonth == 1) {
+            console.log("There are 28 or 29 days in the current month.");
+        } else {
+            console.log("There are 30 days in the current month.");
+        }
+        // Step 7 Done
+        
+        // Step 8
+        var chosenDate = new Date();
+        var monthName = chosenDate.toDateString().slice(4,7);
+        console.log(monthName);
+        // Step 8 Done
+        
+        // Step 9
+        var chosenDate = new Date();
+        var day = chosenDate.getDay();
+        if (day == 0 || day == 6) {
+            console.log("Oh snap! It\'s the weekend!");
+        } else {
+            console.log("Boo! It\'s not the weekend yet!");
+        }
+        // Step 9 Done
+        
+        // Step 10
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        var chosenDate = new Date();
+        var day = chosenDate.getDay();
+        var yesterday = day - 1;
+        if (yesterday >= 0) {
+            console.log(days[yesterday]);
+        } else {
+            console.log(days[6]);
+        }
+        // Step 10 Done
+        
+        // Step 11
+        var currentDate = new Date();
+        var day = currentDate.toDateString().charAt(0); // charAt(0) displays first letter of day
+        console.log(day);
+        // Step 11 Done
+        // Part 2 Done
+        
+        // Part 3
+        // Step 12
+        var firstInteger = prompt("Please enter a number:");
+        var secondInteger = prompt("Please enter a different number:");
+        if (firstInteger > secondInteger ) {
+            console.log(firstInteger);
+        } else {
+            console.log(secondInteger);
+        }
+        // Step 12 Done
+        
+        // Step 13
+        var students = ["Ursula", "Paul", "Henry", "Tabitha", "Lucy"];
+        var marks = [80, 77, 88, 95, 68];
+        var grades = [];
+        for (var i = 0; i < 5; i++) {
+            if (marks[i] >= 90) {
+                grades[i] = "A";
+            } else if (marks[i] >= 80) {
+                grades[i] = "B";
+            } else if (marks[i] >= 70) {
+                grades[i] = "C";
+            } else if (marks[i] <= 60) {
+                grades[i] = "D";    
+            } else {
+                grades[i] = "F"; }
+            console.log(students[i] + " " + marks[i] + " " + grades[i]);
+        }
+        // Step 13 Done
+        
+        // Step 14
+        for (var i = 1; i <= 15; i++) {
+            if ((i % 2) == 0) { // % is remainder
+                console.log(i + " is an even number.");
+            } else {
+                console.log(i + " is an odd number.");
+            }  
+        }
+        // Step 14 Done
+        
+        // Step 15
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                console.log("FizzBuzz");
+            }
+            else if (i % 3 == 0) {
+                console.log("Fizz");
+            }
+            else if (i % 5 == 0) {
+                console.log("Buzz");
+            }
+            else {
+                console.log(i);
+            } 
+        }
+        // Step 15 Done
+        // Part 3 Done
+        
+        // Part 4 - The "Hitchhiker's Guide to the Galaxy" Game
+        var ready = prompt("Are you ready to play your game?");
+        var notReady;
+        if (ready == "yes") {
+            alert("Awesome, our hero is waiting!");
+        } else {
+            notReady = confirm("Too bad, we’re going to play anyway because our hero desperately needs your help!");
+        }
+        if (notReady == false) {
+            alert("Okay, see you later!");
+        } else {
+            alert("You are in a dark, dingy, and humid cave searching for the lost treasure of Captain Chingadera. You are disoriented, lost, hungry and extremely thirsty. You see a speck of light in the distance ahead of you, something shimmering to your right, and the sound of running water to your left. Your back is against the wall…");
+            var direction = prompt("Which direction would you like to head (please enter forward, left, or right).");
+            switch (direction) {
+            case "forward":
+                alert("You walk about 100 yards and safely make your way out of the cave.");
+                break;
+            case "left":
+                alert("Your thirst has gotten the better of you. You trip on a rock, hit your head, and fall into a pool of water and drown.");
+                break;
+            case "right":
+                alert("You found the gold! You walk into a small room and see thousands of gold coins, jewels, chalices, and more. You jump into the pile of gold in celebration and immediately a hidden door slams down and traps you in the room forever.");
+                break;
+            default:
+                alert("The ghost of Captain Chingadera has condemned you to eternal damnation and you shall now burn in the hot excoriation for lifeless lowlifes for not choosing the correct option….loser.");
+            }
+            var rating = prompt("Please rate this game on a scale of 1 to 10");
+            if (rating < 1 || rating > 10) {
+                rating = 10;
+            } else {
+            }
+            if (rating >= 6) {
+                alert("Thank you, we will continue to make improvements to the game!");
+            } else {
+                alert("Whatever, you weren’t very good at this game anyway!");
+            }
+        }
+        // Part 4 - The "Hitchhiker's Guide to the Galaxy" Game Done
+        
+        // Part 5 - The "Coin Flip" Game
+        var coinFlip = Math.random();
+        coinFlip = Math.round(coinFlip + 1);
+        var choice = prompt('Select "Heads" or "Tails"');
+        if (coinFlip == 2) {
+            coinFlip = "Heads";
+        } else {
+            coinFlip = "Tails";
+        }
+        if (coinFlip == "Heads" && choice == "Heads") {
+            alert("The flip was heads and you chose heads...you win!");
+        } else if (coinFlip == "Heads" && choice == "Tails") {
+            alert("The flip was heads but you chose tails...you lose!");
+        } else if (coinFlip == "Tails" && choice == "Heads") {
+            alert("The flip was tails but you chose heads...you lose!");
+        } else {
+            alert("The flip was tails and you chose tails...you win!");
+        }
+        // Part 5 - The "Coin Flip" Game Done
+        
+        // Part 6 - The “Coin Flip” Game Redux
+        var coinFlip;
+        for (var i = 0; i < 10; i++) {
+            var coinFlip = Math.random();
+            coinFlip = Math.round(coinFlip);
+            if (coinFlip == 0) {
+                console.log("Heads");
+            } else {
+                console.log("Tails");
+            }
+        }
+        // Part 6 -  The “Coin Flip” Game Redux Done
+        
+        // Part 7 - The “Coin Flip Streak” Game
+        var coinFlip;
+        do { // do while loop
+            coinFlip = Math.random(); // random number
+            coinFlip = Math.round(coinFlip); // round number up
+            if (coinFlip == 0) {
+                console.log("Heads");
+            } else {
+                console.log("Tails");
+            }
+        } while (coinFlip == 0);
+        // Part 7 - The “Coin Flip Streak” Game Done
+        
+        // Part 8 - Looping a Triangle
+        var i = 0;
+        var sign = "";
+        do {
+           i += 1;
+           sign = sign + "#";
+           console.log(sign);
+        } while (i <= 6);
+        // Part 8 - Looping a Triangle Done
+        
+        // Part 9 - Odd or Even?
+        var i;
+        for (i = 0; i <= 15; i++) {
+            if (i % 2 == 0) {
+                console.log(i + " is even");
+            }
+            else {
+                console.log(i + " is odd");
+            }
+        }
+        // Part 9 - Odd or Even? Done
+        
+    </script>
+</head>
+
+<body>
+   <header>
+       
+   </header>
+   
+   <footer>
+       
+   </footer>
+    
+</body>
+</html>
